@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtSpace - Feed</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <a href="index.html" class="logo">ArtSpace</a>
+                <ul>
+                    <li><a href="feed.html">Feed</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="community.html">Community</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Feed</h1>
+        <section class="posts">
+            <div class="post">
+                <div class="post-header">
+                    <img src="https://via.placeholder.com/40" alt="User Avatar" class="post-avatar">
+                    <span class="post-author">Jane Doe</span>
+                </div>
+                <p>Just finished this new piece! What do you think?</p>
+                <img src="https://via.placeholder.com/600x400" alt="Post image" class="post-image">
+                <div class="post-actions">
+                    <button class="like-button">Like <span class="likes-count">0</span></button>
+                    <button>Comment</button>
+                    <button>Share</button>
+                </div>
+                <div class="comments"></div>
+                <form class="comment-form">
+                    <input type="text" placeholder="Add a comment...">
+                    <button type="submit">Post</button>
+                </form>
+            </div>
+            <div class="post">
+                <div class="post-header">
+                    <img src="https://via.placeholder.com/40" alt="User Avatar" class="post-avatar">
+                    <span class="post-author">John Smith</span>
+                </div>
+                <p>Experimenting with a new style. Feedback welcome!</p>
+                <img src="https://via.placeholder.com/600x400" alt="Post image" class="post-image">
+                <div class="post-actions">
+                    <button class="like-button">Like <span class="likes-count">0</span></button>
+                    <button>Comment</button>
+                    <button>Share</button>
+                </div>
+                <div class="comments"></div>
+                <form class="comment-form">
+                    <input type="text" placeholder="Add a comment...">
+                    <button type="submit">Post</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

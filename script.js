@@ -1,55 +1,50 @@
-// Validation for the login form
-document.getElementById("login-form")?.addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent form submission for validation
+// Toggle password visibility for login form
+document.getElementById("togglePassword")?.addEventListener("click", function() {
+    const passwordField = document.getElementById("password");
+    const type = passwordField.type === "password" ? "text" : "password";
+    passwordField.type = type;
+});
 
-    // Grab form data
+// Form validation for login
+document.getElementById("login-form")?.addEventListener("submit", function(event) {
+    event.preventDefault();
+
     const email = document.getElementById("emailid").value;
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
+    const errorMessage = document.getElementById("login-error");
 
-    let errorMessage = "";
+    errorMessage.innerText = ""; // Clear any previous error message
 
-    // Simple validation checks
+    // Simple validation
     if (!email || !username || !password) {
-        errorMessage = "All fields are required.";
-    }
-
-    // Provide feedback to user
-    if (errorMessage) {
-        document.getElementById("login-error").innerText = errorMessage;
+        errorMessage.innerText = "All fields are required.";
     } else {
-        // Process the login (e.g., send data to the server)
         console.log("Logging in...");
-        // You can send the data to the server here using fetch or AJAX
+        // Submit the form or send the data to the backend
     }
 });
 
-// Validation for the sign-up form
+// Form validation for sign-up
 document.getElementById("signup-form")?.addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent form submission for validation
+    event.preventDefault();
 
-    // Grab form data
     const name = document.getElementById("name").value;
     const email = document.getElementById("emailid").value;
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
     const confirmPassword = document.getElementById("confirm-password").value;
+    const errorMessage = document.getElementById("signup-error");
 
-    let errorMessage = "";
+    errorMessage.innerText = ""; // Clear any previous error message
 
-    // Simple validation checks
+    // Simple validation
     if (!name || !email || !username || !password || !confirmPassword) {
-        errorMessage = "All fields are required.";
+        errorMessage.innerText = "All fields are required.";
     } else if (password !== confirmPassword) {
-        errorMessage = "Passwords do not match.";
-    }
-
-    // Provide feedback to user
-    if (errorMessage) {
-        document.getElementById("signup-error").innerText = errorMessage;
+        errorMessage.innerText = "Passwords do not match.";
     } else {
-        // Process the sign-up (e.g., send data to the server)
         console.log("Signing up...");
-        // You can send the data to the server here using fetch or AJAX
+        // Submit the form or send the data to the backend
     }
 });
