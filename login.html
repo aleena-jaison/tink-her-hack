@@ -3,33 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - KALAGramaM</title>
+    <title>Login-KALAGram</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
-        <div>
-            <a href="index.html">KALAGramaM</a> 
-        </div>
-        <div class="nav-right">
-            <a href="#">Join</a>
-            <a href="#">Events</a>
-            <a href="#">Community</a>
-            <button>Sign Up</button>
-            <button>Start Creating</button>
-        </div>
+        <div class="logo">KALAGram</div>
     </nav>
     <div class="login-container">
         <div class="login-content">
             <h2>Login</h2>
-            <form>
+            <form id="login-form">
+                <label for="emailid">Email ID:</label><br>
+                <input type="email" id="emailid" name="emailid" required><br>
                 <label for="username">Username:</label><br>
                 <input type="text" id="username" name="username"><br><br>
                 <label for="password">Password:</label><br>
                 <input type="password" id="password" name="password"><br><br>
                 <button type="submit">Login</button>
+                <div id="login-error" style="color: red; margin-top: 10px;"></div>
             </form>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
