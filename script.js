@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (email && username && password) {
             // Display the success message
             signupMessageDiv.textContent = "You have successfully signed up!";
-            signupMessageDiv.style.color = "red";
+            signupMessageDiv.style.color = "green";
           
             setTimeout(function() {
                 window.location.href = "profile.html"; // Redirect to profile page

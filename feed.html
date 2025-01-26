@@ -3,66 +3,282 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArtSpace - Feed</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>KALAGram Feed</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #e2e2e2;
+            color: #1a1919;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #912323 3px solid;
+        }
+        header a {
+            color: #292727;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        header .highlight, header .current a {
+            color: #bc1a1a;
+            font-weight: bold;
+        }
+        header a:hover {
+            color: #202020;
+            font-weight: bold;
+        }
+        .feed-container {
+            display: flex;
+            margin-top: 20px;
+        }
+        .main-feed {
+            flex: 2;
+            margin-right: 20px;
+        }
+        .sidebar {
+            flex: 1;
+        }
+        .post {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .post-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .post-header img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .post-content img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .post-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .post-actions button {
+            background: none;
+            border: none;
+            color: #aa2525;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .sidebar-section {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .trending-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .trending-item img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            margin-right: 10px;
+        }
+        .create-post {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .create-post textarea {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .create-post button {
+            background: #b31010;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .create-post button:hover {
+            background: #ac1a1a;
+        }
+        @media (max-width: 768px) {
+            .feed-container {
+                flex-direction: column;
+            }
+            .main-feed {
+                margin-right: 0;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <nav>
-            <div class="container">
-                <a href="index.html" class="logo">ArtSpace</a>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">KALA</span>Gram</h1>
+            </div>
+            <nav>
                 <ul>
-                    <li><a href="feed.html">Feed</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="current"><a href="feed.html">Feed</a></li>
                     <li><a href="events.html">Events</a></li>
                     <li><a href="community.html">Community</a></li>
                     <li><a href="profile.html">Profile</a></li>
+                    <li><a href="#" id="logout">Logout</a></li>
                 </ul>
-            </div>
-        </nav>
+            </nav>
+        </div>
     </header>
 
     <main class="container">
-        <h1>Feed</h1>
-        <section class="posts">
-            <div class="post">
-                <div class="post-header">
-                    <img src="https://via.placeholder.com/40" alt="User Avatar" class="post-avatar">
-                    <span class="post-author">Jane Doe</span>
+        <div class="feed-container">
+            <section class="main-feed">
+                <div class="create-post">
+                    <textarea placeholder="Share your art or thoughts..."></textarea>
+                    <button>Post</button>
                 </div>
-                <p>Just finished this new piece! What do you think?</p>
-                <img src="https://via.placeholder.com/600x400" alt="Post image" class="post-image">
-                <div class="post-actions">
-                    <button class="like-button">Like <span class="likes-count">0</span></button>
-                    <button>Comment</button>
-                    <button>Share</button>
+                <div class="post">
+                    <div class="post-header">
+                        <img src="https://source.unsplash.com/50x50/?portrait" alt="User Avatar">
+                        <div>
+                            <h3>Jane Doe</h3>
+                            <p>2 hours ago</p>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <p>Just finished this new piece! What do you think?</p>
+                        <img src="https://source.unsplash.com/600x400/?art" alt="Artwork">
+                    </div>
+                    <div class="post-actions">
+                        <button id="like-button-1">Like (23)</button>
+                        <button>Comment (5)</button>
+                        <button>Share</button>
+                    </div>
                 </div>
-                <div class="comments"></div>
-                <form class="comment-form">
-                    <input type="text" placeholder="Add a comment...">
-                    <button type="submit">Post</button>
-                </form>
-            </div>
-            <div class="post">
-                <div class="post-header">
-                    <img src="https://via.placeholder.com/40" alt="User Avatar" class="post-avatar">
-                    <span class="post-author">John Smith</span>
+                <div class="post">
+                    <div class="post-header">
+                        <img src="https://source.unsplash.com/50x50/?artist" alt="User Avatar">
+                        <div>
+                            <h3>John Smith</h3>
+                            <p>5 hours ago</p>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <p>Exploring new techniques in digital art. Here's my latest experiment!</p>
+                        <img src="https://source.unsplash.com/600x400/?digital-art" alt="Digital Artwork">
+                    </div>
+                    <div class="post-actions">
+                        <button id="like-button-2">Like (45)</button>
+                        <button>Comment (12)</button>
+                        <button>Share</button>
+                    </div>
                 </div>
-                <p>Experimenting with a new style. Feedback welcome!</p>
-                <img src="https://via.placeholder.com/600x400" alt="Post image" class="post-image">
-                <div class="post-actions">
-                    <button class="like-button">Like <span class="likes-count">0</span></button>
-                    <button>Comment</button>
-                    <button>Share</button>
+            </section>
+            <aside class="sidebar">
+                <div class="sidebar-section">
+                    <h2>Trending Artists</h2>
+                    <div class="trending-item">
+                        <img src="https://source.unsplash.com/50x50/?artist1" alt="Trending Artist 1">
+                        <div>
+                            <h4>Emily Chen</h4>
+                            <p>Abstract Painter</p>
+                        </div>
+                    </div>
+                    <div class="trending-item">
+                        <img src="https://source.unsplash.com/50x50/?artist2" alt="Trending Artist 2">
+                        <div>
+                            <h4>Michael Lee</h4>
+                            <p>Digital Illustrator</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="comments"></div>
-                <form class="comment-form">
-                    <input type="text" placeholder="Add a comment...">
-                    <button type="submit">Post</button>
-                </form>
-            </div>
-        </section>
+                <div class="sidebar-section">
+                    <h2>Upcoming Events</h2>
+                    <p>Virtual Art Exhibition - May 15</p>
+                    <p>Artist Meetup - June 2</p>
+                    <p>Workshop: Digital Art Basics - June 10</p>
+                </div>
+            </aside>
+        </div>
     </main>
 
-    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const logoutLink = document.getElementById('logout');
+            logoutLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                if (confirm('Are you sure you want to log out?')) {
+                    alert('Logging out...');
+                    // Here you would typically clear the user's session and redirect to the login page
+                    // window.location.href = 'login.html';
+                }
+            });
+
+            const likeButtons = document.querySelectorAll('[id^="like-button-"]');
+            likeButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                const currentLikes = parseInt(this.textContent.match(/\d+/)[0]);
+                const newLikes = currentLikes + 1;
+                this.textContent = `Like (${newLikes})`; 
+                });
+                });
+            });
+
+            const createPostButton = document.querySelector('.create-post button');
+            const createPostTextarea = document.querySelector('.create-post textarea');
+            createPostButton.addEventListener('click', function() {
+                const postContent = createPostTextarea.value.trim();
+                if (postContent) {
+                    alert('Post created! (In a real app, this would be saved to a database)');
+                    createPostTextarea.value = '';
+                } else {
+                    alert('Please enter some content for your post.');
+                }
+            });
+       
+    </script>
 </body>
 </html>

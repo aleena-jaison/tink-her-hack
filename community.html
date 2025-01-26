@@ -3,35 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Community</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>KALAgram Community</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #7e1d1d;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #dbd9d9;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #bc1a1a 3px solid;
+        }
+        header a {
+            color: #1a1919;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        header .highlight, header .current a {
+            color: #bc1a1a;
+            font-weight: bold;
+        }
+        header a:hover {
+            color: #ccc;
+            font-weight: bold;
+        }
+        .communities {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .community {
+            flex-basis: calc(50% - 20px);
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        }
+        .community h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        .community-details {
+            margin: 10px 0;
+            font-size: 0.9em;
+            color: #666;
+        }
+        .community button {
+            background: #bc1a1a;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .community button:hover {
+            background: #a01616;
+        }
+        .search-bar {
+            margin: 20px 0;
+        }
+        .search-bar input {
+            width: 70%;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .search-bar button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background: #bc1a1a;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .create-community {
+            background: #db3434;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .create-community:hover {
+            background: #b92929;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <nav>
-            <div class="container">
-                <a hrefheader>
-        <nav>
-            <div class="container">
-                <a href="index.html" class="logo">ArtSpace</a>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">KALA</span>Gram</h1>
+            </div>
+            <nav>
                 <ul>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="feed.html">Feed</a></li>
                     <li><a href="events.html">Events</a></li>
-                    <li><a href="community.html">Community</a></li>
+                    <li class="current"><a href="community.html">Community</a></li>
                     <li><a href="profile.html">Profile</a></li>
                 </ul>
-            </div>
-        </nav>
+            </nav>
+        </div>
     </header>
 
     <main class="container">
-        <h1>Art Communities</h1>
+        <h1>Communities</h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Search communities...">
+            <button>Search</button>
+        </div>
         <section class="communities">
             <div class="community">
                 <h2>Digital Artists Collective</h2>
                 <p>A community for digital artists to share their work, techniques, and inspiration.</p>
                 <div class="community-details">
-                    <span>Members: 1,200</span>
+                    <span>Members: 1,200</span> | <span>Posts: 5,670</span>
                 </div>
                 <button>Join Community</button>
                 <button>Discussion Board</button>
@@ -40,14 +156,56 @@
                 <h2>Photography Enthusiasts</h2>
                 <p>For those who love capturing moments through the lens.</p>
                 <div class="community-details">
-                    <span>Members: 3,500</span>
+                    <span>Members: 3,500</span> | <span>Posts: 12,450</span>
+                </div>
+                <button>Join Community</button>
+                <button>Discussion Board</button>
+            </div>
+            <div class="community">
+                <h2>Traditional Painters United</h2>
+                <p>A space for oil, acrylic, and watercolor painters to connect and share their creations.</p>
+                <div class="community-details">
+                    <span>Members: 2,800</span> | <span>Posts: 9,320</span>
+                </div>
+                <button>Join Community</button>
+                <button>Discussion Board</button>
+            </div>
+            <div class="community">
+                <h2>Sculptors' Corner</h2>
+                <p>For sculptors working with various materials to discuss techniques and showcase their work.</p>
+                <div class="community-details">
+                    <span>Members: 950</span> | <span>Posts: 3,100</span>
                 </div>
                 <button>Join Community</button>
                 <button>Discussion Board</button>
             </div>
         </section>
+        <a href="#" class="create-community">Create New Community</a>
     </main>
 
-    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const joinButtons = document.querySelectorAll('.community button:first-of-type');
+            joinButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    if (this.textContent === 'Join Community') {
+                        this.textContent = 'Leave Community';
+                        this.style.background = '#e74c3c';
+                    } else {
+                        this.textContent = 'Join Community';
+                        this.style.background = '#1abc9c';
+                    }
+                });
+            });
+
+            const searchButton = document.querySelector('.search-bar button');
+            const searchInput = document.querySelector('.search-bar input');
+            searchButton.addEventListener('click', function() {
+    alert(`Searching for ${searchInput.value}`); // Corrected: Added closing backtick
+});
+                // Here you would typically send this search query to a server
+            });
+        
+    </script>
 </body>
 </html>
