@@ -1,5 +1,5 @@
 # KALA-Gram 🎯
-## "Where KAlA Connects"
+## "Where KALA Connects"
 
 ## Basic Details
 ### Team Name: New Stack
