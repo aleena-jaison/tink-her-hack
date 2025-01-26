@@ -4,7 +4,6 @@
 ## Basic Details
 ### Team Name: New Stack
 
-
 ### Team Members
 - Member 1: Aleena Jaison - LBS Institute of Technology for Women, Poojapura
 - Member 2: Arsha V A - LBS Institute of Technology for Women, Poojapura
@@ -28,54 +27,39 @@ For Software:
 - HTML, CSS, JS
 - ChatGPT, Gemini
 
-### Implementation
-For Software:
 # Installation
 1.  Navigate to the project directory you downloaded or cloned.
 2.  Locate the `index.html` file and run it.
 
-### Project Documentation
-For Software:
-
 # Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+https://1drv.ms/i/c/2d67655e8bd786e1/EXnwNXHGra9LsV-NqS6yHdYBvrzmXK93ncRmvG5F7Top4A?e=G2jXsY
+Signup page
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+https://1drv.ms/i/c/2d67655e8bd786e1/EfuvNFWwAZNOvs0NB2wPE20B3rAru8zgeItQYcBaISdcBw?e=XWFAUu
+Events page
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
-
-# Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
+https://1drv.ms/i/c/2d67655e8bd786e1/EZheMigZB-VMtsRoyZ8TJ1oBsL9iJJWs_qNysQk0H_0pNw?e=aGCeXR
+Community page
 
 # Build Photos
-![Team](Add photo of your team here)
+Team Photo- https://1drv.ms/i/c/2d67655e8bd786e1/EZdg4ZSG7rZOpWmxKBNVJwYBeWHgSg1ztkHId4fbdvxrlg?e=ufmZjq
 
+Components- login, signup, community, feed, events, profile, logout
 
-![Components](Add photo of your components here)
-*List out all components shown*
+Building Home Page- https://1drv.ms/i/c/2d67655e8bd786e1/EdCNAtfpLy1Ftok0uN5TeysBaGK4KNN2b8FYGpFZwGDeeA?e=JGhnXz
+Added buttons, background colour, login and signup options, headings, etc
 
-![Build](Add photos of build process here)
-*Explain the build steps*
-
-![Final](Add photo of final product here)
-*Explain the final build*
+Final Home Page- https://1drv.ms/i/c/2d67655e8bd786e1/Ed8IMXZjn3dBrtARyhDetQcBpr_UadYxXQMsF4sfmMpdpA?e=rWlHwe
 
 ### Project Demo
 # Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
-
-# Additional Demos
-[Add any extra demo materials/links]
+https://1drv.ms/v/c/2d67655e8bd786e1/EQ5OtmlYz0BGpUYMUdnt7PoBkcJ01CB8Jej4Qn_MoNh1rA?e=Zv6E7C
+Demonstrates the flow of website
 
 ## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+- Aleena Jaison: Making of home page and other pages
+- Arsha V A: Designing of event and community page
+- Anett Benny: find resources, idea pitching, coding of login and signup page
 
 ---
 Made with ❤️ at TinkerHub
