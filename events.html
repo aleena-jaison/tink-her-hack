@@ -3,48 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Events Management</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #b41d1d; 
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #event-form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        #event-form > * {
+            flex: 1 1 200px;
+        }
+
+        #event-form input,
+        #event-form button {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        #event-form input {
+            flex: 1;
+        }
+
+        #event-form button {
+            background-color: #990000;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #event-form button:hover {
+            background-color: #a04545;
+        }
+
+        #events-list {
+            list-style-type: none;
+        }
+
+        .event-item {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .event-item button {
+            background-color: #c10d00;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .event-item button:hover {
+            background-color: #cb0000;
+        }
+
+        @media (max-width: 600px) {
+            #event-form {
+                flex-direction: column;
+            }
+
+            #event-form > * {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="container">
-                <a href="index.html" class="logo">ArtSpace</a>
-                <ul>
-                    <li><a href="feed.html">Feed</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="community.html">Community</a></li>
-                    <li><a href="profile.html">Profile</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+    <div class="container">
+        <h1>Events Management</h1>
+        <form id="event-form">
+            <input type="text" id="event-name" placeholder="Event Name" required>
+            <input type="date" id="event-date" required>
+            <input type="time" id="event-time" required>
+            <input type="text" id="event-location" placeholder="Location" required>
+            <button type="submit">Add Event</button>
+        </form>
+        <ul id="events-list"></ul>
+    </div>
 
-    <main class="container">
-        <h1>Events</h1>
-        <section class="events">
-            <div class="event">
-                <h2>Digital Art Exhibition</h2>
-                <p>Showcasing the best digital art from around the world</p>
-                <div class="event-details">
-                    <span>Date: July 15, 2023</span>
-                    <span>Location: New York, NY</span>
-                </div>
-                <button>RSVP</button>
-            </div>
-            <div class="event">
-                <h2>Photography Workshop</h2>
-                <p>Learn advanced techniques from professional photographers</p>
-                <div class="event-details">
-                    <span>Date: August 5, 2023</span>
-                    <span>Location: Los Angeles, CA</span>
-                </div>
-                <button>RSVP</button>
-            </div>
-        </section>
-    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const eventForm = document.getElementById('event-form');
+            const eventsList = document.getElementById('events-list');
+            let events = JSON.parse(localStorage.getItem('events')) || [];
 
-    <script src="script.js"></script>
+            function renderEvents() {
+                eventsList.innerHTML = '';
+                events.forEach((event, index) => {
+                    const li = document.createElement('li');
+                    li.className = 'event-item';
+                    li.innerHTML = `
+                        <div>
+                            <strong>${event.name}</strong><br>
+                            Date: ${event.date} | Time: ${event.time}<br>
+                            Location: ${event.location}
+                        </div>
+                        <button onclick="deleteEvent(${index})">Delete</button>
+                    `;
+                    eventsList.appendChild(li);
+                });
+            }
+
+            function addEvent(event) {
+                event.preventDefault();
+                const name = document.getElementById('event-name').value;
+                const date = document.getElementById('event-date').value;
+                const time = document.getElementById('event-time').value;
+                const location = document.getElementById('event-location').value;
+
+                events.push({ name, date, time, location });
+                localStorage.setItem('events', JSON.stringify(events));
+                renderEvents();
+                eventForm.reset();
+            }
+
+            window.deleteEvent = function(index) {
+                events.splice(index, 1);
+                localStorage.setItem('events', JSON.stringify(events));
+                renderEvents();
+            }
+
+            eventForm.addEventListener('submit', addEvent);
+            renderEvents();
+        });
+    </script>
 </body>
 </html>
+
