@@ -1,6 +1,9 @@
 # KALA-Gram 🎯
 ## "Where KALA Connects"
 
+### Project Stage
+Our project is in the initial stage. We have done only the front end part and have created a profile that shows up only. We want to furthur develop this project so we will continue with the backend 
+
 ## Basic Details
 ### Team Name: New Stack
 
@@ -10,7 +13,7 @@
 - Member 3: Anett Benny - LBS Institute of Technology for Women, Poojapura
 
 ### Hosted Project Link
-[mention your project hosted project link here]
+https://vercel.com/aleena-jaisons-projects/kalagram
 
 ### Project Description
 KALAGram is an online platform built to foster a thriving art community. Users can showcase their artwork (referred to as "KALAs"), explore diverse artistic styles, participate in events, and connect with fellow creators and art lovers.
