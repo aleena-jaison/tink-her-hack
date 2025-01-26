@@ -16,13 +16,13 @@ Our project is in the initial stage. We have done only the front end part and ha
 https://vercel.com/aleena-jaisons-projects/kalagram
 
 ### Project Description
-KALAGram is an online platform built to foster a thriving art community. Users can showcase their artwork (referred to as "KALAs"), explore diverse artistic styles, participate in events, and connect with fellow creators and art lovers.
+KALAGram is an social online platform built to foster a thriving art community. Users can showcase their artwork (referred to as "KALAs"), explore diverse artistic styles, participate in events, and connect with fellow creators and art lovers.
 
 ### The Problem statement
 Many artists struggle to find a platform to effectively showcase their work and connect with a relevant audience.
 
 ### The Solution
- KALAGramaM solves this problem by providing a dedicated online space for artists to share their "KALAs," engage with a supportive community, and discover new opportunities. 
+KALAGram solves this problem by providing a dedicated online space for artists to share their "KALAs," engage with a supportive community, and discover new opportunities. 
 
 ## Technical Details
 ### Technologies/Components Used
