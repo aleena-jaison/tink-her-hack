@@ -1,47 +1,38 @@
-# [Project Name] 🎯
-
+# KALA-Gram 🎯
+## "Where KALA Connects"
 
 ## Basic Details
-### Team Name: [Name]
+### Team Name: New Stack
 
 
 ### Team Members
-- Member 1: [Name] - [College]
-- Member 2: [Name] - [College]
-- Member 3: [Name] - [College]
+- Member 1: Aleena Jaison - LBS Institute of Technology for Women, Poojapura
+- Member 2: Arsha V A - LBS Institute of Technology for Women, Poojapura
+- Member 3: Anett Benny - LBS Institute of Technology for Women, Poojapura
 
 ### Hosted Project Link
 [mention your project hosted project link here]
 
 ### Project Description
-[2-3 lines about what your project does]
+KALAGram is an online platform built to foster a thriving art community. Users can showcase their artwork (referred to as "KALAs"), explore diverse artistic styles, participate in events, and connect with fellow creators and art lovers.
 
 ### The Problem statement
-[What ridiculous problem are you solving?]
+Many artists struggle to find a platform to effectively showcase their work and connect with a relevant audience.
 
 ### The Solution
-[How are you solving it? Keep it fun!]
+ KALAGramaM solves this problem by providing a dedicated online space for artists to share their "KALAs," engage with a supportive community, and discover new opportunities. 
 
 ## Technical Details
 ### Technologies/Components Used
 For Software:
-- [Languages used]
-- [Frameworks used]
-- [Libraries used]
-- [Tools used]
-
-For Hardware:
-- [List main components]
-- [List specifications]
-- [List tools required]
+- HTML, CSS, JS
+- ChatGPT, Gemini
 
 ### Implementation
 For Software:
 # Installation
-[commands]
-
-# Run
-[commands]
+1.  Navigate to the project directory you downloaded or cloned.
+2.  Locate the `index.html` file and run it.
 
 ### Project Documentation
 For Software:
@@ -59,15 +50,6 @@ For Software:
 # Diagrams
 ![Workflow](Add your workflow/architecture diagram here)
 *Add caption explaining your workflow*
-
-For Hardware:
-
-# Schematic & Circuit
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
-
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
 
 # Build Photos
 ![Team](Add photo of your team here)
