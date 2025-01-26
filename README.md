@@ -13,7 +13,7 @@ Our project is in the initial stage. We have done only the front end part and ha
 - Member 3: Anett Benny - LBS Institute of Technology for Women, Poojapura
 
 ### Hosted Project Link
-https://vercel.com/aleena-jaisons-projects/kalagram
+https://kalagram.vercel.app
 
 ### Project Description
 KALAGram is an social online platform built to foster a thriving art community. Users can showcase their artwork (referred to as "KALAs"), explore diverse artistic styles, participate in events, and connect with fellow creators and art lovers.
